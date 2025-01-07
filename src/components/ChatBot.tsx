@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ChatBot = () => {
   const [messages, setMessages] = useState<Array<{ text: string; isBot: boolean }>>([
-    { text: "Welcome to MIZUKI AI Terminal. How can I assist you today?", isBot: true }
+    { text: "Welcome to TAIKO AI Terminal. How can I assist you today?", isBot: true }
   ]);
   const [input, setInput] = useState("");
 
@@ -33,7 +33,7 @@ const ChatBot = () => {
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
             <div className="w-3 h-3 rounded-full bg-green-500"></div>
           </div>
-          <div className="flex-1 text-center text-sm animate-glitch">mizuki-ai@system: ~/chat</div>
+          <div className="flex-1 text-center text-sm animate-glitch">taiko-ai@system: ~/chat</div>
         </div>
         <div className="terminal-body">
           <div className="space-y-4 mb-4">
@@ -43,14 +43,14 @@ const ChatBot = () => {
                 className={`terminal-prompt ${message.isBot ? 'animate-glitch' : ''}`}
               >
                 <span className={`${message.isBot ? 'text-terminal-green' : 'text-terminal-red'}`}>
-                  {message.isBot ? 'MIZUKI-AI>' : 'USER>'} {message.text}
+                  {message.isBot ? 'TAIKO-AI>' : 'USER>'} {message.text}
                 </span>
               </div>
             ))}
           </div>
           <form onSubmit={handleSubmit} className="mt-4">
             <div className="terminal-prompt">
-              <span className="animate-glitch">USER></span>
+              <span className="animate-glitch">USER{'>'}</span>
               <input
                 type="text"
                 value={input}
