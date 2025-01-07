@@ -2,11 +2,12 @@ import React from 'react';
 
 const Terminal = () => {
   const asciiArt = `
-███    ███ ██ ███████ ██    ██ ██   ██ ██ 
-████  ████ ██    ███  ██    ██ ██  ██  ██ 
-██ ████ ██ ██   ███   ██    ██ █████   ██ 
-██  ██  ██ ██  ███    ██    ██ ██  ██  ██ 
-██      ██ ██ ███████  ██████  ██   ██ ██ 
+████████╗ █████╗ ██╗██╗  ██╗ ██████╗     █████╗ ██╗
+╚══██╔══╝██╔══██╗██║██║ ██╔╝██╔═══██╗   ██╔══██╗██║
+   ██║   ███████║██║█████╔╝ ██║   ██║   ███████║██║
+   ██║   ██╔══██║██║██╔═██╗ ██║   ██║   ██╔══██║██║
+   ██║   ██║  ██║██║██║  ██╗╚██████╔╝   ██║  ██║██║
+   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ╚═════╝    ╚═╝  ╚═╝╚═╝
 `;
 
   const commands = [
@@ -27,14 +28,14 @@ const Terminal = () => {
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
             <div className="w-3 h-3 rounded-full bg-green-500"></div>
           </div>
-          <div className="flex-1 text-center text-sm animate-glitch">mizuki@system: ~</div>
+          <div className="flex-1 text-center text-sm animate-glitch">taiko@system: ~</div>
         </div>
         <div className="terminal-body">
           <pre className="ascii-art mb-4">{asciiArt}</pre>
           <div className="border-t border-b border-dashed border-terminal-green my-4 py-4 animate-glitch">
             [SYNAPTECH DYNAMICS CORP.] [BUILD: 2.3.4513214] [ACCESS LEVEL: ROOT]
           </div>
-          <p className="mb-4 animate-glitch">Welcome to Project MIZUKI. Type 'help' for available commands.</p>
+          <p className="mb-4 animate-glitch">Welcome to Project TAIKO. Type 'help' for available commands.</p>
           <div className="mb-4">
             <p className="animate-glitch mb-2">AVAILABLE COMMANDS:</p>
             {commands.map((cmd, index) => (
@@ -45,7 +46,7 @@ const Terminal = () => {
             ))}
           </div>
           <div className="terminal-prompt">
-            <span className="animate-glitch">mizuki@system:~$</span>
+            <span className="animate-glitch">taiko@system:~$</span>
             <span className="animate-flicker">▊</span>
           </div>
         </div>
